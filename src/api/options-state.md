@@ -1,6 +1,6 @@
-# Options: State
+# Options: State {#options-state}
 
-## data
+## data {#data}
 
 A function that returns the initial reactive state for the component instance.
 
@@ -47,7 +47,7 @@ A function that returns the initial reactive state for the component instance.
 
 - **См. также:** [Reactivity in Depth](/guide/extras/reactivity-in-depth.html)
 
-## props
+## props {#props}
 
 Declare the props of a component.
 
@@ -125,9 +125,11 @@ Declare the props of a component.
   }
   ```
 
-- **См. также:** [Props](/guide/components/props.html)
+- **См. также:**
+  - [Guide - Props](/guide/components/props.html)
+  - [Guide - Typing Component Props](/guide/typescript/options-api.html#typing-component-props) <sup class="vt-badge ts" />
 
-## computed
+## computed {#computed}
 
 Declare computed properties to be exposed on the component instance.
 
@@ -205,9 +207,11 @@ Declare computed properties to be exposed on the component instance.
   }
   ```
 
-- **См. также:** [Computed Properties](/guide/essentials/computed.html)
+- **См. также:**
+  - [Guide - Computed Properties](/guide/essentials/computed.html)
+  - [Guide - Typing Computed Properties](/guide/typescript/options-api.html#typing-computed-properties) <sup class="vt-badge ts" />
 
-## methods
+## methods {#methods}
 
 Declare methods to be mixed into the component instance.
 
@@ -248,7 +252,7 @@ Declare methods to be mixed into the component instance.
 
 - **См. также:** [Event Handling](/guide/essentials/event-handling.html)
 
-## watch
+## watch {#watch}
 
 Declare watch callbacks to be invoked on data change.
 
@@ -366,7 +370,7 @@ Declare watch callbacks to be invoked on data change.
 
 - **См. также:** [Watchers](/guide/essentials/watchers.html)
 
-## emits
+## emits {#emits}
 
 Declare the custom events emitted by the component.
 
@@ -429,9 +433,11 @@ Declare the custom events emitted by the component.
   }
   ```
 
-- **См. также:** [Fallthrough Attributes](/guide/components/attrs.html)
+- **См. также:**
+  - [Guide - Fallthrough Attributes](/guide/components/attrs.html)
+  - [Guide - Typing Component Emits](/guide/typescript/options-api.html#typing-component-emits) <sup class="vt-badge ts" />
 
-## expose
+## expose {#expose}
 
 Declare exposed public properties when the component instance is accessed by a parent via template refs.
 

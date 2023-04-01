@@ -1,4 +1,4 @@
-# Reactivity API: Core
+# Reactivity API: Core {#reactivity-api-core}
 
 :::info См. также
 To better understand the Reactivity APIs, it is recommended to read the following chapters in the guide:
@@ -7,7 +7,7 @@ To better understand the Reactivity APIs, it is recommended to read the followin
 - [Reactivity in Depth](/guide/extras/reactivity-in-depth.html)
 :::
 
-## ref()
+## ref() {#ref}
 
 Takes an inner value and returns a reactive and mutable ref object, which has a single property `.value` that points to the inner value.
 
@@ -23,7 +23,7 @@ Takes an inner value and returns a reactive and mutable ref object, which has a 
 
 - **Подробности:**
 
-  The ref object is mutable - i.e. you can assign new values to `.value`. It is also reactive - i.e. any read operations to `.value` is tracked, and write operations will trigger associated effects.
+  The ref object is mutable - i.e. you can assign new values to `.value`. It is also reactive - i.e. any read operations to `.value` are tracked, and write operations will trigger associated effects.
 
   If an object is assigned as a ref's value, the object is made deeply reactive with [reactive()](#reactive). This also means if the object contains nested refs, they will be deeply unwrapped.
 
@@ -41,9 +41,9 @@ Takes an inner value and returns a reactive and mutable ref object, which has a 
 
 - **См. также:**
   - [Guide - Reactive Variables with `ref()`](/guide/essentials/reactivity-fundamentals.html#reactive-variables-with-ref)
-  - [Guide - Typing `ref()`](/guide/typescript/composition-api.html#typing-ref)
+  - [Guide - Typing `ref()`](/guide/typescript/composition-api.html#typing-ref) <sup class="vt-badge ts" />
 
-## computed()
+## computed() {#computed}
 
 Takes a getter function and returns a readonly reactive [ref](#ref) object for the returned value from the getter. It can also take an object with `get` and `set` functions to create a writable ref object.
 
@@ -111,9 +111,9 @@ Takes a getter function and returns a readonly reactive [ref](#ref) object for t
 - **См. также:**
   - [Guide - Computed Properties](/guide/essentials/computed.html)
   - [Guide - Computed Debugging](/guide/extras/reactivity-in-depth.html#computed-debugging)
-  - [Guide - Typing `computed()`](/guide/typescript/composition-api.html#typing-computed)
+  - [Guide - Typing `computed()`](/guide/typescript/composition-api.html#typing-computed) <sup class="vt-badge ts" />
 
-## reactive()
+## reactive() {#reactive}
 
 Returns a reactive proxy of the object.
 
@@ -188,9 +188,9 @@ Returns a reactive proxy of the object.
 
 - **См. также:**
   - [Guide - Reactivity Fundamentals](/guide/essentials/reactivity-fundamentals.html)
-  - [Guide - Typing `reactive()`](/guide/typescript/composition-api.html#typing-reactive)
+  - [Guide - Typing `reactive()`](/guide/typescript/composition-api.html#typing-reactive) <sup class="vt-badge ts" />
 
-## readonly()
+## readonly() {#readonly}
 
 Takes an object (reactive or plain) or a [ref](#ref) and returns a readonly proxy to the original.
 
@@ -227,7 +227,7 @@ Takes an object (reactive or plain) or a [ref](#ref) and returns a readonly prox
   copy.count++ // warning!
   ```
 
-## watchEffect()
+## watchEffect() {#watcheffect}
 
 Runs a function immediately while reactively tracking its dependencies and re-runs it whenever the dependencies are changed.
 
@@ -312,15 +312,15 @@ Runs a function immediately while reactively tracking its dependencies and re-ru
   - [Guide - Watchers](/guide/essentials/watchers.html#watcheffect)
   - [Guide - Watcher Debugging](/guide/extras/reactivity-in-depth.html#watcher-debugging)
 
-## watchPostEffect()
+## watchPostEffect() {#watchposteffect}
 
 Alias of [`watchEffect()`](#watcheffect) with `flush: 'post'` option.
 
-## watchSyncEffect()
+## watchSyncEffect() {#watchsynceffect}
 
 Alias of [`watchEffect()`](#watcheffect) with `flush: 'sync'` option.
 
-## watch()
+## watch() {#watch}
 
 Watches one or more reactive data sources and invokes a callback function when the sources change.
 
